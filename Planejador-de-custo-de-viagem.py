@@ -2,7 +2,7 @@
 
 #Coletando as variáveis que irei usar nas contas.
 print(' ')
-print('-----Seja bem-vindo à calculadora de custo de vaigem!-----')
+print('-----Seja bem-vindo à calculadora de custo de viagem!-----')
 print(' ')
 
 distancia = float(input('Qual a distância que será percorrida em Km? = '))
