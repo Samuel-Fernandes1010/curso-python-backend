@@ -2,7 +2,7 @@
 
 #Coletando as variáveis que irei usar nas contas.
 print(' ')
-print('-----Seja bem-vindo à calculadora de custo de vaigem!-----')
+print('-----Seja bem-vindo à calculadora de custo de viagem!-----')
 print(' ')
 
 distancia = float(input('Qual a distância que será percorrida em Km? = '))
@@ -10,7 +10,10 @@ consumo_medio = float(input('Qual o consumo médio do seu veículo em Km/L? (O c
 preco_combustivel = float(input('Qual o preço atual do combustível por litro (em reais)? = '))
 
 #O primeiro parâmetro que vou calcular é o consumo total da viagem que vai ser calculado dividindo a distância que vai ser percorrida na viagem pelo consumo médio do veículo.
-consumo_total = (distancia / consumo_medio)
+if consumo_medio == 0:
+    print('Não consigo calcular o seu consumo.')
+else:
+    consumo_total = (distancia / consumo_medio)
 
 #O segundo parâmetro que vou calcular vai ser a quantidade de combustível que vai ser gasta durante a viagem, para isso basta multiplicar o consumo total da viagem pelo preço do combustível. 
 gasto_combustivel = (consumo_total * preco_combustivel)
