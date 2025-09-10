@@ -13,7 +13,11 @@ def cadastrar_aluno(alunos):
     while True:#Fazendo a validação para garantir que vamos ter só números na matrícula. O while vai obrigar o usuario colocar apenas números.
         try:
             matricula = int(input('\nNúmero de matrícula: ')) #Fazendo a validação para garantir que vamos ter só números na matrícula.
-            break
+            
+            if any(aluno['matricula'] == matricula for aluno in alunos):
+                print('Número de matrícula já cadastrado. Tente novamente.')
+            else:
+                break   
         except ValueError:#Caso tenha letras no número de matrícula vai dar o ValueError.
             print('Erro: Digite apenas números para o número de matrícula.')
         
@@ -47,11 +51,11 @@ def buscar_aluno_matricula(alunos):
     encontrado = False
     for aluno in alunos:
         if aluno['matricula'] == matricula:
-            print(f'Aluno encontrado: \nAluno: {aluno['nome']} | Matrícula: {aluno['matricula']} | Curso: {aluno['curso']}')
+            print(f'\nAluno encontrado: \n\nAluno: {aluno['nome']} | Matrícula: {aluno['matricula']} | Curso: {aluno['curso']}')
             encontrado = True
             break
     if not encontrado:
-        print('Aluno não encontrado.')
+        print('\nAluno não encontrado.')
 
 def buscar_aluno_nome(alunos): #Adicionei a busca pelo nome, porque é uma funcionalidade interessante e tava fácil de fazer.
     print('---Buscar aluno por nome---')
@@ -59,11 +63,11 @@ def buscar_aluno_nome(alunos): #Adicionei a busca pelo nome, porque é uma funci
     encontrado = False
     for aluno in alunos:
         if aluno['nome'] == nome:
-            print(f'Aluno encontrado: \nAluno: {aluno['nome']} | Matrícula: {aluno['matricula']} | Curso: {aluno['curso']}')
+            print(f'\nAluno encontrado: \n\nAluno: {aluno['nome']} | Matrícula: {aluno['matricula']} | Curso: {aluno['curso']}')
             encontrado = True
             break
     if not encontrado:
-        print('Aluno não encontrado.')
+        print('\nAluno não encontrado.')
 
 def main():
     alunos = [] 
