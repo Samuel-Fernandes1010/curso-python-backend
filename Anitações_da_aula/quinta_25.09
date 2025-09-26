@@ -1,0 +1,15 @@
+Abstract Base Class:
+Ela vai obrigar que uma função que esteja na classe abstract aparessa nas classes filhas e subclasses
+As calsses abstract tem a notação (ABC),  elas não podem ser intanciadas apenas as classes filhas e as subclasses
+
+Polimorfimo: Multiplas formas, mesma interface.
+É a capacidade de objetos de diferentes classes responderem à mesma chamada de método, cada um de sua maneira específca.
+
+Exemplo: Um humano e um gato possuem a função de andar, porém eles andam de formas diferentes.
+
+Existem dois tipos de polimorfismo:
+
+Polimorfimo de Sobrescrita: ligado à herança, onde uma subclasse redefine um método de superclasse.
+Polimorfimo Ad-hoc (Duck Typing): Se um objeto "anda como um pato e grasna como um pato", oPython trata como um pato.
+ 
+
