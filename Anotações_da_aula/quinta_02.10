@@ -1,0 +1,26 @@
+*Emcapsulamento: É o princípio de agrupar dados (atribuidos) e os métodos que os manipulam em uma única unidade (classe), e restringir o acesso dereto a esse dado. 
+Proteger o código? (Pesquisar a fundo)
+
+    Emcapsulamento = Camada de segurança
+
+Exemplo:
+    Proteger uma senha de usuário dentro do código.
+ 
+
+Níveis de emcapsulamento:
+
+    *self.publico (Sem Underline) = Acesso dentro e fora da minha classe.
+        Sinalisar que um atributo ou  método faz parte da implementação interna da classe e de sua hierarquia, não devendo ser parte da sua interface pública.
+
+    *self._protegido (Uma Underline (_)) = só cosigo acessar o meu dado dentro da minha classe ou em classes filhas.
+        É apenas uma convenção no Python ent~\o funciona como o público (não compensa), funciona mais como um aviso para outros desenvolvedores.
+
+    *self.__privado (Duas Underlines (__)) = Acesso apenas dentro da minha classe.
+        Impedir qualquer acesso externo direto. Ideal para dados críticos cuja modificação deve ser rigorosamente controlada por métodos.
+        Name Mangling: Quando eu defino uma variável privada ele modifica a sintaxe de __* para _*__** (Interno no Python)
+        Acessar e modificar dados Privados.
+
+            Método Getter: Um método que retorna o valor de um atributo privad. Serve para permitir a leitura controlada. (Acontece tudo de forma interna para usos específicos)
+
+            Método Setter: Um método público que modifica o valor de um atributo privado, mas aplicando regras de negócio e validação.(Acontece tudo de forma interna para usos específicos)
+
