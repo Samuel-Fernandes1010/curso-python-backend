@@ -138,7 +138,7 @@ def gerenciar_carrinho():
                 ProdutoDigital("Curso Online POO", 100.0, 20.0)
             ]
             print("Foram adicionados produtos de exemplo ao seu carrinho!")
-            # finaliza automaticamente (previsto no seu pedido)
+            # finaliza automaticamente
             finalizar_compra(carrinho)
             print('Finalizando compra de teste. Até mais!')
             break  # encerra o loop/programa
